@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>XatSpace Jonny</title>
+
+<link href="https://fonts.googleapis.com/css?family=Quicksand|Karla&display=swap" rel="stylesheet">
+<link href="assets/css/cappuccicons.css" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+
+<style>
+:root{
+  --frame:22px; --frameRgb:255,255,255; --frameOp:.25;
+  --shadow:45px; --shadowRgb:0,0,0; --shadowOp:.06;
+
+  --w:600px; --sbw:300px; --sbh:470px;
+  --pad:20px; --top:13px;
+
+  --a1:#d183ff; --a2:#fafafa; --txt:#999; --txt2:#888; --bg:#fff; --pink: #ffdefd;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#939393;font:12px/1.6 "Quicksand",sans-serif}
+a{color:inherit;text-decoration:none}
+#wrap{position:fixed;inset:0;display:grid;place-items:center}
+#frame{display:flex;border:var(--frame) solid rgb(255 222 253);
+  box-shadow:0 0 var(--shadow) rgba(var(--shadowRgb),var(--shadowOp))}
+#left{width:var(--w);background:var(--pink);position:relative}
+#topbar{padding:var(--top);background:var(--pink);display:flex;justify-content:space-between;align-items:center}
+.btn{display:flex;align-items:center;border:1px solid var(--a1);border-radius:6px;overflow:hidden;background:#fff}
+.btn i{padding:5px;background:var(--a1);color:#fff;font-size:12px}
+.btn span{padding:6px 10px;font:700 9px "Quicksand";letter-spacing:1px;text-transform:uppercase;color:var(--a1)}
+#content{padding:var(--pad);display:flex;gap:20px}
+#who{flex:1}
+#title{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+#title .heart{width:52px;height:52px;border-radius:50%;background:var(--a1);display:grid;place-items:center;color:#fff}
+#title .t{line-height:1}
+#title .t small{display:block;background:var(--a1);color:#fff;padding:4px 14px;border-radius:0 18px 0 0;
+  font:700 9px "Quicksand";letter-spacing:1px;text-transform:uppercase}
+#title .t b{display:block;background:var(--pink);color:var(--txt2);padding:10px 14px;text-transform:uppercase;letter-spacing:1px}
+#row{display:flex;gap:14px;align-items:flex-start}
+#avatar{width:80px;height:80px;border:5px solid var(--a1);border-radius:10px;object-fit:cover}
+.stat{display:flex;align-items:center;gap:8px;margin:8px 0;color:var(--txt)}
+.stat i{width:26px;height:26px;border-radius:50%;background:var(--a1);color:#fff;display:grid;place-items:center;font-size:12px}
+.stat label{background:var(--pink);border-left:5px solid var(--a1);padding:6px 10px;
+  font:700 11px "Quicksand";letter-spacing:.7px;text-transform:uppercase;color:var(--txt2)}
+#bio{position:absolute;left:var(--pad);right:var(--pad);bottom:var(--pad);max-height:140px;overflow:auto;text-align:justify;color:var(--txt)}
+#bio img{width:100%;display:block}
+
+#right{width:var(--sbw);height:var(--sbh);background:var(--pink);position:relative;overflow:hidden}
+#right .bg{position:absolute;inset:0;background:rgb(189, 189, 189) center/cover no-repeat}
+#right img{position:absolute;left:0;bottom:0;height:100%}
+#quote{position:absolute;left:20px;right:20px;bottom:20px;background:rgba(255,255,255,.865);
+  border:1px solid rgba(51,51,51,.07);border-radius:12px;padding:14px;color:#666}
+</style>
+
+<script>
+$(function(){
+  $(".toTop").on("click", function(e){
+    e.preventDefault();
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+});
+</script>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="frame">
+
+      <div id="left">
+        <div id="topbar">
+          <a class="btn toTop" href="#"><i class="cp cp-arrow-up"></i><span>Top</span></a>
+          <div style="display:flex;gap:12px">
+            
+            <a class="btn" href="https://youtu.be/aCR6_GfA5nY?si=2unblMMKnIPUzwAa" target="_blank" rel="noopener noreferrer">
+              <i class="cp cp-youtube"></i><span>Youtube</span>
+            </a>
+          </div>
+        </div>
+
+        <div id="content">
+          <div id="who">
+            <div id="title">
+              <div class="heart"><i class="cp cp-home-o"></i></div>
+              <div class="t">
+                <small>Welcome to my Space</small>
+                <b>Jonny</b>
+              </div>
+            </div>
+
+            <div id="row">
+              <img id="avatar" src="assets/images/karen_xat/k3.jpeg" alt="">
+              <div>
+                <div class="stat"><i class="cp cp-pencil-o"></i><label>Name:</label><span>KAREN</span></div>
+                <div class="stat"><i class="cp cp-worldwide-o"></i><label>Country:</label><span>Ecuador</span></div>
+                <div class="stat"><i class="cp cp-music-note"></i><label>Music:</label><span>♫</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="width:245px;display:flex;justify-content:center;align-items:flex-start">
+            <img src="assets/images/karen_xat/k2.jpeg" style="width:165px;margin-top:35px" alt="">
+          </div>
+        </div>
+
+        <div id="bio">
+          <img src="assets/images/karen_xat/k5.jpg" alt="">
+        </div>
+      </div>
+
+      <div id="right">
+        <img src="assets/images/karen_xat/k1.jpeg" alt="">
+        <div id="quote">
+          We all dream of having something more, so it's not a bad thing.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
